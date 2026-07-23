@@ -1,0 +1,19 @@
+generated: '2026-07-17'
+method: probed
+source: live probes of https://anglers.jp/.well-known/*
+host: https://anglers.jp
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: >-
+  No .well-known discovery documents are published. The site sits behind
+  Cloudflare and returns a 202 challenge with an empty body to automated
+  clients on its content routes; no developer, docs, or api subdomain resolves.
